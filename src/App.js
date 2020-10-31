@@ -7,6 +7,8 @@ import 'bulma/css/bulma.css'
 import './App.css';
 import {data} from './data';
 import Hero from './components/Hero';
+import Filters from './components/Filters';
+
 
 function App() {
   const filters = {
@@ -16,8 +18,11 @@ function App() {
     price: 1000,
     rooms: 5
   }
-  return (
-    <Hero filters={ filters } />
+  return (  
+    <div> 
+    <Hero filters={ filters } />   
+    <Filters filters={filters}/>
+    </div>
   );
 }
 
