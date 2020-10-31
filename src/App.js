@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import '@fortawesome/fontawesome' ;
+import '@fortawesome/fontawesome-free-solid';
+import '@fortawesome/react-fontawesome';
+import '@fortawesome/fontawesome-svg-core';
+import 'bulma/css/bulma.css'
+
 import './App.css';
+import {data} from './data';
+import Hero from './components/Hero';
 
 function App() {
+  const filters = {
+    dateFrom: data.today, // Proviene del archivo data.js
+    dateTo: new Date(data.today.valueOf() + 86400000),
+    country: 'Argentina',
+    price: 1000,
+    rooms: 5
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Hero filters={ filters } />
   );
 }
 
