@@ -4,7 +4,7 @@ const OptionsFilter = (props) => {
     const {icon, options, selected} = props;
 
     const listOptions = options.map((option) =>
-        <option>{option.value}</option>
+        <option>{option.name}</option>
     );
 
     console.log("options : ", options);   
@@ -17,7 +17,7 @@ const OptionsFilter = (props) => {
                     </select>
                 </div>
                 <div className="icon is-small is-left">
-                    <i className={icon}></i>
+                    <i className={`fas fa-${icon}`}></i>
                 </div>
             </div>
         </div>

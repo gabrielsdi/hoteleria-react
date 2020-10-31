@@ -12,7 +12,7 @@ const DateFilter = (props) => {
             <div className="control has-icons-left">
                 <input className="input" type="date" value={formatDate} />
                 <span className="icon is-small is-left">
-                    <i className={icon}></i>
+                    <i className={`fas fa-${icon}`}></i>
                 </span>
             </div>
         </div>
