@@ -1,8 +1,7 @@
 import { React } from 'react';
 
-const OptionsFilter = (props) => {
-    const {icon, options, selected} = props;
-
+const OptionsFilter = ({ options, icon, name, selected, onChange }) => {
+    
     const listOptions = options.map((option) =>
         <option>{option.name}</option>
     );
@@ -12,7 +11,7 @@ const OptionsFilter = (props) => {
         <div className="field">
             <div className="control has-icons-left">
                 <div className="select" style={{ width: '100%' }}>
-                    <select value={selected} style={{ width: '100%' }}>
+                    <select value={selected} name={ name } onChange={onChange} style={{ width: '100%' }}>
                     {listOptions}
                     </select>
                 </div>
